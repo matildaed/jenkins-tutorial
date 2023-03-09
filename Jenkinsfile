@@ -3,7 +3,7 @@ pipeline{
         stages{
             stage('clone repo'){
                 steps{
-                    sh "git clone https://gitlab.com/qacdevops/chaperootodo_client ~/jenkins-tutorial-test/"
+                    sh "git clone https://gitlab.com/qacdevops/chaperootodo_client "
                 }
             }
                 stage('deploy app '){
