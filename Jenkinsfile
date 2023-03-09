@@ -3,12 +3,17 @@ pipeline{
         stages{
             stage('Make Directory'){
                 steps{
-                    sh "mkdir ~/jenkins-tutorial-test"
+                    sh "mkdir ~/jenkins-tutorial-exercise"
                 }
             }
-            stage('Make Files'){
+            stage('clone repo'){
                 steps{
-                    sh "touch ~/jenkins-tutorial-test/file1 ~/jenkins-tutorial-test/file2"
+                    sh "git clone https://gitlab.com/qacdevops/chaperootodo_client ~/jenkins-tutorial-test/"
+                }
+            }
+                stage('deploy app '){
+                steps{
+                    sh "sudo docker-compose pull && sudo -E DB_PASSWORD=${DB_PASSWORD} docker-compose up -d"
                 }
             }
         }
