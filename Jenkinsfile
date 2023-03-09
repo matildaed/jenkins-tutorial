@@ -4,7 +4,7 @@ pipeline{
            stage('clone repo'){
                 steps{
                     sh "cd ~/chaperootodo_client"
-                    sh "git clone https://gitlab.com/qacdevops/chaperootodo_client"
+                    sh "git clone https://gitlab.com/qacdevops/chaperootodo_client.git"
                 }
             }
                 stage('deploy app '){
