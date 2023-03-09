@@ -1,11 +1,6 @@
 pipeline{
         agent any
         stages{
-            stage('Make Directory'){
-                steps{
-                    sh "mkdir ~/jenkins-tutorial-exercise"
-                }
-            }
             stage('clone repo'){
                 steps{
                     sh "git clone https://gitlab.com/qacdevops/chaperootodo_client ~/jenkins-tutorial-test/"
