@@ -1,11 +1,6 @@
 pipeline{
         agent any
         stages{
-            stage('Make Directory'){
-                steps{
-                    sh "mkdir ~/chaperootodo_client"
-                }
-            }
            stage('clone repo'){
                 steps{
                     sh "cd ~/chaperootodo_client"
